@@ -1,0 +1,22 @@
+{
+  "proxy": "",
+  "env_file": "./bridge.env",
+  "log_path": "./bridge_log.jsonl",
+  "default_from": "grok-research",
+  "timeout_s": 180,
+  "ping_timeout_s": 8,
+  "max_per_hour_per_agent": 20,
+  "defaults": {
+    "protocol": "a2a"
+  },
+  "agents": {
+    "research": {
+      "url": "https://hermes-agent.example.ts.net:8651",
+      "token_env": "HERMES_BRIDGE_TOKEN_RESEARCH"
+    },
+    "operations": {
+      "url": "https://hermes-agent.example.ts.net:8652",
+      "token_env": "HERMES_BRIDGE_TOKEN_OPERATIONS"
+    }
+  }
+}
