@@ -18,15 +18,14 @@ Both clients use Python's standard library. The bridge does not host a service o
 
 ## 1. Install the Hermes skill
 
-Add the repository as a skill tap, inspect the skill, then install it:
+Inspect and install the skill directly from GitHub:
 
 ```sh
-hermes skills tap add Taimylife/hermes-grok-bridge
-hermes skills inspect Taimylife/hermes-grok-bridge/grok-bridge
-hermes skills install Taimylife/hermes-grok-bridge/grok-bridge
+hermes skills inspect Taimylife/hermes-grok-bridge/skills/grok-bridge
+hermes skills install Taimylife/hermes-grok-bridge/skills/grok-bridge
 ```
 
-Repeat the install for each Hermes profile that needs to contact Grok. In each profile's private `.env`, set its sender name and a URL/key pair for each Grok recipient. The skill frontmatter must declare each recipient-specific environment variable so Hermes passes it to the script; the included skill shows the naming pattern. Do not put real values in Git, a prompt, or a shared project file.
+This repository also works as a Hermes skill tap if you want to browse its skills: `hermes skills tap add Taimylife/hermes-grok-bridge`. Repeat installation for each Hermes profile that needs to contact Grok. In each profile's private `.env`, set its sender name and a URL/key pair for each Grok recipient. The skill frontmatter must declare each recipient-specific environment variable so Hermes passes it to the script; the included skill shows the naming pattern. Do not put real values in Git, a prompt, or a shared project file.
 
 ## 2. Enable Hermes' native A2A endpoint
 
